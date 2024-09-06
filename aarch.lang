@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="aarch" name="My assembly" version="2.0" _section="Source">
+  <metadata>
+    <property name="mimetypes">text/x-my-assembly</property>
+    <property name="globs">*.s</property>
+    <property name="line-comment-start">//</property>
+    <property name="block-comment-start">/*</property>
+    <property name="block-comment-end">*/</property>
+  </metadata>
+
+    <styles> 
+    <style id="dp"          _name="Dp"          map-to="def:string"/>
+    <style id="branch"      _name="Branch"       map-to="def:character"/>
+    <style id="load-store"  _name="Load-store"  map-to="def:keyword"/>
+    <style id="label"       _name="Label"       map-to="def:operator"/>
+    <style id="hexadecimal" _name="Hexadecimal" map-to="def:type"/>
+    <style id="decimal"     _name="Decimal"     map-to="def:decimal"/>
+    <style id="shift"       _name="Shift"       map-to="def:boolean"/>
+    <style id="directive"   _name="Directive"   map-to="def:constant"/>
+    <style id="condition"   _name="Condition"   map-to="def:special-char"/>
+    <style id="comment"   _name="Comment"   map-to="def:comment"/>
+    <style id="terminate"   _name="Terminate"   map-to="def:identifier"/>
+  </styles>
+  <definitions>
+    <context id="aarch">
+      <include>
+        <context id="terminate" style-ref="terminate"> 
+          <match>\band\s+x0,\s+x0,\s+x0\b</match>
+        </context>
+        <context id="dp" style-ref="dp">
+          <keyword>add</keyword>
+          <keyword>sub</keyword>
+          <keyword>adds</keyword>
+          <keyword>subs</keyword>
+          <keyword>cmp</keyword>
+          <keyword>cmn</keyword>
+          <keyword>neg</keyword>
+          <keyword>negs</keyword>
+          <keyword>and</keyword>
+          <keyword>ands</keyword>
+          <keyword>bic</keyword>
+          <keyword>bics</keyword>
+          <keyword>eor</keyword>
+          <keyword>orr</keyword>
+          <keyword>eon</keyword>
+          <keyword>orn</keyword>
+          <keyword>tst</keyword>
+          <keyword>movk</keyword>
+          <keyword>movn</keyword>
+          <keyword>movz</keyword>
+          <keyword>mov</keyword>
+          <keyword>mvn</keyword>
+          <keyword>madd</keyword>
+          <keyword>msub</keyword>
+          <keyword>mul</keyword>
+          <keyword>mneg</keyword>
+        </context>
+        <context id="branch" style-ref="branch">
+          <keyword>b</keyword>
+          <keyword>br</keyword>
+        </context>
+        <context id="load-store" style-ref="load-store">
+          <keyword>ldr</keyword>
+          <keyword>str</keyword>
+        </context>
+        <context id="label" style-ref="label">
+          <match>\b\w+:</match>
+        </context>
+        <context id="hexadecimal" style-ref="hexadecimal">
+          <match>\#0x[0-9A-Fa-f]+\b</match>
+        </context>
+        <context id="decimal" style-ref="decimal">
+          <match>\#[0-9]+\b</match>
+        </context>
+        <context id="shift" style-ref="shift">
+          <keyword>lsl</keyword>
+          <keyword>lsr</keyword>
+          <keyword>asr</keyword>
+          <keyword>ror</keyword>
+        </context>
+        <context id="directive" style-ref="directive">
+          <match>\.int\b</match>
+        </context>
+        <context id="condition" style-ref="condition">
+          <match>\.(eq|ne|ge|lt|gt|le|al)\b</match>
+        </context>
+        <context id="comment" style-ref="comment">
+          <start>\/\/</start>
+          <end>$</end>
+        </context>
+      </include>
+    </context>
+  </definitions>
+
+
+</language>

@@ -1,0 +1,93 @@
+/* General window styling */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    border-width: 0px;
+    transition: background-color 0.2s ease; /* Smooth background color transition */
+}
+
+/* Menu bar and menu items */
+menubar {
+    background-color: #89b4fa;
+    color: #181825;
+    min-height: 35px;
+}
+
+menuitem {
+    background-color: #89b4fa;
+    color: #181825;
+}
+
+menuitem:hover, GtkMenuItem:hover {
+    background-color: #45475a;
+}
+
+notebook tabs {
+    background-color: #1e1e2e;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+/* Each tab */
+notebook tab {
+    background-color: #181825;
+    color: #45475a;
+    padding: 0px; /* Adjust tab padding as needed */
+    margin: 0px; /* Adjust tab padding as needed */
+    font-size: 20px;
+}
+
+notebook tab:checked {
+    background-color: #45475a;
+    color: #89b4fa;
+    padding: 0px; /* Adjust tab padding as needed */
+    margin: 0px; /* Adjust tab padding as needed */
+}
+
+textview.view * {
+    background-color: #1e1e2e;
+    color: #45475a;
+    padding: 10px;
+}
+
+textview.view text {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+textview.view text selection{
+    background-color: #45475a;
+    color: #cdd6f4;
+
+}
+
+treeview.view {
+    background-color: #181825;
+    color: #9399b2;
+    border-width: 10px;
+    border-color: #89b4fa;
+}
+
+
+treeview.view:selected {
+    background-color: #45475a;
+    color: #cdd6f4;
+}
+
+
+list {
+    background-color: #181825;
+    color: #9399b2;
+    border-width: 0px;
+}
+
+list row {
+    padding: 10px;
+}
+
+list row:selected {
+    background-color: #45475a;
+    color: #cdd6f4;
+
+}
+
