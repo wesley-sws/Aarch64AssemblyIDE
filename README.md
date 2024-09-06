@@ -13,6 +13,7 @@ Any warnings about GTimeVal are due to its usage in GtkSourceView3.
   - `Cmd/Ctrl + W`: Close assembly code tab
   - `Cmd/Ctrl + T`: Add assembly code tab
   - `Cmd/Ctrl + 1-9`: Navigate through different tabs (9 for rightmost tab)
+  - `Esc`: Close autocomplete window or file dialog
 - **Themes**: Options include light theme, dark theme, and catppuccin (default).
 - **Autocomplete**: Code completion based on the mnemonics of the AArch64 Assembly Language.
 - **Syntax Highlighting**: Different colors for different syntax elements.
