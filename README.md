@@ -1,8 +1,8 @@
 # Aarch64 Assembly IDE
 
 AArch64_Assembly_IDE is an integrated development environment (IDE) specifically designed for AArch64 assembly language programming.
-Note the Emulator and Assembler codebases are private due to Imperial College's projects policies but can be shown on request. Code making use of them in the IDE have been commented.
-Any warnings about GTimeVal are due to its usage in GtkSourceView3.
+Note the Emulator and Assembler codebases are private due to Imperial College's projects policies but can be shown on request. Code making use of their files and functions have been commented.
+Any warnings related to GTimeVal are caused by its usage in GtkSourceView3. Since GTimeVal is not utilized in this project, these warnings can be safely ignored.
 
 ## Features
 
