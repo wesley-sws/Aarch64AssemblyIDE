@@ -15,7 +15,7 @@ Any warnings about GTimeVal are due to its usage in GtkSourceView3.
   - `Cmd/Ctrl + 1-9`: Navigate through different tabs (9 for rightmost tab)
   - `Esc`: Close autocomplete window or file dialog
 - **Themes**: Options include light theme, dark theme, and catppuccin (default).
-- **Autocomplete**: Code completion based on the mnemonics of the AArch64 Assembly Language.
+- **Autocomplete**: Code completion based on the mnemonics of the AArch64 Assembly Language. Use the arrow keys to navigate through suggestions and press Enter to select an option.
 - **Syntax Highlighting**: Different colors for different syntax elements.
 - **Error Detection**: Underlines and shows errors in your code as you type.
 - **Build**: Can build assembly file to binary file as well as emulating its execution on a Raspberry Pi (text file will be produced).
